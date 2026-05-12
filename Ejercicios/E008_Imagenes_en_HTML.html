@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imágenes en HTML</title>
 </head>
+
 <body>
     <h1>Ejercicio Práctico: Uso de Imágenes sin CSS</h1>
-<hr>
-<h2>Objetivo</h2>
-<p>Aprender a insertar imágenes en una página web utilizando únicamente HTML.</p>
-<hr>
-<h2>Instrucciones</h2>
-<p>Debes crear una página web que incluya:</p>
-<ol>
-<li>Un título principal.</li>
-<li>Una imagen local.</li>
-<li>Una imagen desde internet.</li>
-<li>Texto alternativo usando <small>alt</small>.</li>
-<li>Ancho y alto definidos.</li>
-<li>Una imagen que funcione como enlace.</li>
-<li>Uso de <small>figure</small> y <small>figcaption</small>.</li>
-<li>Uso de <small>loading="lazy"</small>.</li>
-<li>No utilizar CSS.</li>
-</ol>
-<h2>Ejemplo Base</h2>
-<h3>1. Imagen local</h3>
-<p>Paisaje con montañas</p>
-<img src="../Imagenes/Picos-de-montana.jpg" alt="" width="500">
-<h3>2. Imagen desde internet</h3>
-<img src="https://placehold.co/300x300" alt="">
-<h3>3. Imagen como enlace</h3>
-<a href="https://www.wikipedia.org/" target="_blank"><img src="../Imagenes/wikiglobo.jpg" alt=""></a>
-<h3>4. Imagen con descripción</h3>
-<img src="https://placehold.co/400x200" alt="Esta imagen utiliza las etiquetas figure y figcaption" title="Imagen de 400x200 píxeles">
-<p>Esta imagen utiliza las etiquetas figure y figcaption.</p>
-<hr>
-<h2>Actividad</h2>
-<p>Completa el ejercicio agregando:</p>
-<ul>
-<li>Dos imágenes adicionales.</li>
-<img src="../Imagenes/desierto2-e1537800205712.jpg" alt="" width="500px"><br>
-<img src="../Imagenes/vicko-mozara-cgwnjcybkyy-unsplash.jpg" alt="" width="500px">
-<br><br>
-<li>Una imagen en formato WebP o SVG.</li>
-<img src="../Imagenes/PantanosPortada.webp" alt="" width="500px">
-<br><br>
-<li>Un enlace a otra página usando una imagen.</li>
-<a href="https://www.nationalgeographic.com.es/" target="_blank"><img src="../Imagenes/national-geographic-channel-logo.webp" alt="" width="500px">
-</ul></a>
-<hr>
-<h2>Preguntas</h2>
-<ol>
-<li>¿Qué función cumple el atributo alt?</li>
-<p>El atributo <small>alt</small> sirve para proveer una descripción en caso de que no cargue la imagen y para dar servicio a los usuarios con problemas de visión</p>
-<li>¿Qué ventaja tiene loading="lazy"?</li>
-<p>El lazy loading es una técnica de desarrollo web que permite cargar recursos solo cuando se necesitan. Este enfoque mejora la eficiencia y optimiza el rendimiento de los sitios web. A través del lazy loading, se minimiza el tiempo de carga inicial y se reducen los recursos consumidos. Esta práctica se ha vuelto esencial en la creación de experiencias de usuario más rápidas y fluidas.</p>
-<li>¿Qué diferencia existe entre PNG y JPG?</li>
-<p>La principal diferencia es que JPG utiliza compresión con pérdida (menor tamaño, menor calidad, ideal para fotos) y PNG utiliza compresión sin pérdida (mayor tamaño, alta calidad, ideal para gráficos). Además, PNG admite fondos transparentes, mientras que JPG no.</p>
-<li>¿Para qué sirve figcaption?</li>
-<p>El elemento HTML <small>figcaption</small> representa un subtítulo o leyenda asociado al contenido del elemento padre <small>figure</small>, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento <small>figcaption</small> es opcional.</p>
-</ol>
+    <hr>
+    <h2>Objetivo</h2>
+    <p>Aprender a insertar imágenes en una página web utilizando únicamente HTML.</p>
+    <hr>
+    <h2>Instrucciones</h2>
+    <p>Debes crear una página web que incluya:</p>
+    <ol>
+        <li>Un título principal.</li>
+        <li>Una imagen local.</li>
+        <li>Una imagen desde internet.</li>
+        <li>Texto alternativo usando <small>alt</small>.</li>
+        <li>Ancho y alto definidos.</li>
+        <li>Una imagen que funcione como enlace.</li>
+        <li>Uso de <small>figure</small> y <small>figcaption</small>.</li>
+        <li>Uso de <small>loading="lazy"</small>.</li>
+        <li>No utilizar CSS.</li>
+    </ol>
+    <h2>Ejemplo Base</h2>
+    <h3>1. Imagen local</h3>
+    <p>Paisaje con montañas</p>
+    <img src="../Imagenes/Picos-de-montana.jpg" alt="" width="500">
+    <h3>2. Imagen desde internet</h3>
+    <img src="https://placehold.co/300x300" alt="">
+    <h3>3. Imagen como enlace</h3>
+    <a href="https://www.wikipedia.org/" target="_blank"><img src="../Imagenes/wikiglobo.jpg" alt=""></a>
+    <h3>4. Imagen con descripción</h3>
+    <img src="https://placehold.co/400x200" alt="Esta imagen utiliza las etiquetas figure y figcaption"
+        title="Imagen de 400x200 píxeles">
+    <p>Esta imagen utiliza las etiquetas figure y figcaption.</p>
+    <hr>
+    <h2>Actividad</h2>
+    <p>Completa el ejercicio agregando:</p>
+    <ul>
+        <li>Dos imágenes adicionales.</li>
+        <img src="../Imagenes/desierto2-e1537800205712.jpg" alt="" width="500px"><br>
+        <img src="../Imagenes/vicko-mozara-cgwnjcybkyy-unsplash.jpg" alt="" width="500px">
+        <br><br>
+        <li>Una imagen en formato WebP o SVG.</li>
+        <img src="../Imagenes/PantanosPortada.webp" alt="" width="500px">
+        <br><br>
+        <li>Un enlace a otra página usando una imagen.</li>
+        <a href="https://www.nationalgeographic.com.es/" target="_blank"><img
+                src="../Imagenes/national-geographic-channel-logo.webp" alt="" width="500px">
+    </ul></a>
+    <hr>
+    <h2>Preguntas</h2>
+    <ol>
+        <li>¿Qué función cumple el atributo <small>alt</small>?</li>
+        <p>El atributo <small>alt</small> sirve para proveer una descripción en caso de que no cargue la imagen y para
+            dar servicio a los usuarios con problemas de visión</p>
+        <li>¿Qué ventaja tiene <small>loading="lazy"</small>?</li>
+        <p>El lazy loading es una técnica de desarrollo web que permite cargar recursos solo cuando se necesitan. Este
+            enfoque mejora la eficiencia y optimiza el rendimiento de los sitios web. A través del lazy loading, se
+            minimiza el tiempo de carga inicial y se reducen los recursos consumidos. Esta práctica se ha vuelto
+            esencial en la creación de experiencias de usuario más rápidas y fluidas.</p>
+        <li>¿Qué diferencia existe entre PNG y JPG?</li>
+        <p>La principal diferencia es que JPG utiliza compresión con pérdida (menor tamaño, menor calidad, ideal para
+            fotos) y PNG utiliza compresión sin pérdida (mayor tamaño, alta calidad, ideal para gráficos). Además, PNG
+            admite fondos transparentes, mientras que JPG no.</p>
+        <li>¿Para qué sirve <small>figcaption</small>?</li>
+        <p>El elemento HTML <small>figcaption</small> representa un subtítulo o leyenda asociado al contenido del
+            elemento padre <small>figure</small>, pudiendo ser colocado como primer o último hijo. Es importante
+            destacar que el elemento <small>figcaption</small> es opcional.</p>
+    </ol>
 </body>
+
 </html>
