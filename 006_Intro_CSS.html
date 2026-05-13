@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introducción a CSS</title>
+    <!-- Incrustado -->
     <style>
         p {
             background-color: red;
@@ -12,11 +13,18 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
         }
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 40px;
+        }
     </style>
+    <!-- Enlazado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1 style="background-color: sandybrown; color: brown; ">CSS: Cascade Style Sheet</h1>
+    <h1>Sin estilo por defecto</h1>
+    <h1 style=" font-family:'Times New Roman', Times, serif; background-color: sandybrown; color: brown; font-size: 20px;">CSS: Cascade Style Sheet</h1>
 
     <p>Se pueden introducir los estilos de tres formas distintas: </p>
     <ul>
@@ -24,13 +32,17 @@
         <li>Incrustado: incluir el estilo en la cabecera <small>head</small> de la página.</li>
         <li>Enlazado: dentro de un archivo separado que se enlaza con el html.</li>
     </ul>
-    <h1 style="background-color: sandybrown; color: brown; ">Este es otro título H1</h1>
+    <h1 class="Loco" style="background-color: sandybrown; color: brown; ">Este es otro título H1</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At repellendus consequuntur eaque autem sint accusamus
         vitae quo quis minus sunt officia deserunt, obcaecati enim! Optio dolorum ad harum modi ullam?</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A obcaecati maxime voluptatum quaerat, est ipsum minima
         vitae sapiente vero error eligendi? Quod quos non nostrum minus dolore, modi magnam nesciunt.</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quae aspernatur in dolorem doloremque iure omnis
         quasi laudantium ex, ea consequatur, dignissimos, amet accusantium tenetur! Quae nihil vel labore nulla.</p>
+
+    <img src="Imagenes/desierto2-e1537800205712.jpg" width="500px" alt="Fotografía de un desierto, dunas de arena bajo la luz del día" title="Fotografía del desierto">
+    <h2>Esto es un H2</h2>
+    <h3>Y esto es un H3</h3>
 
 </body>
 

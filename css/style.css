@@ -1,0 +1,44 @@
+/* 
+Esto es un comentario de CSS
+ */
+/* Esto aplica a todos los elementos de la web
+ *{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+} */
+
+h1 {
+    /* border: 10px double blue; */
+    border: 10px double red; border-bottom: 5px dotted blue;
+    text-decoration: underline 5px blue;
+    text-align: center;
+
+}
+
+h2
+{
+
+}
+
+h3
+{
+
+}
+
+p
+{
+text-align: justify;
+display: block;
+margin-left: 20px;
+margin: 20px;
+
+}
+
+img{
+    border-radius: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
