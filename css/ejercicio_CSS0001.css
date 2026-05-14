@@ -1,0 +1,21 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 300px;
+    text-align: center;
+}
+
+body {
+    background-color: hidden hsl(50, 94%, 49%);
+    border:  40px solid rgb(255, 255, 255);
+}
+div {
+    margin: hidden 50px;
+    background-color: hsl(50, 94%, 49%);
+p {
+    text-align: justify;
+    color: rgb(126, 93, 15);
+}
