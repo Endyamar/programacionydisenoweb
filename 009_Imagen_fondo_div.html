@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen de fondo en un div</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .dimensiones{
+            height: 100vh;
+            width: 100vw;
+
+        }
+
+        .imagenes{
+            background-image: url("https://picsum.photos/1920/1080");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            overflow:hidden;
+
+        }
+
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3rem;
+            color: white;
+            margin-top: 40vh;
+            text-align: center;
+
+        
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="dimensiones imagenes"><h1>Soy el número X</h1></div>
+    <div class="dimensiones imagenes"><h1>Soy el número Y</h1></div>
+    <div class="dimensiones imagenes"><h1>Soy el número Z</h1></div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+
+  <style>
+    html{
+      font-size: 16px;
+      font-family: "Poppins";
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      border: 1.1rem solid #7b16ff;
+      min-height: 100vh;
+    }
+
+    nav{
+text-align: right;
+    }
+    nav li{
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    nav li a{
+      text-decoration: none;
+    }
+
+    footer ul li {
+      display: inline-block;
+    }
+
+    h1{
+     font-size: 9vh;
+     color: rgb(32, 32, 32);
+     line-height: 5.8rem;
+    }
+
+    main{
+      width:65%;
+    }
+    /* ESTILOS DE CLASE */
+    .contenedor {
+      width: 60vw;
+      border: 1px solid blue;
+      margin: 0 auto;
+    }
+
+    .logo {
+      color: #7b16ff;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 1.5rem ;
+    }
+
+    .iconos {
+      width: 1.5rem;
+    }
+
+    .avatar{
+      width: 50px;
+      border: 0.16rem solid black;
+      border-radius: 40px;
+    }
+    .negrita{
+      font-weight: bold;
+    }
+    .autor{
+      font-size: 21px;
+      margin-top: 2.2rem;
+      margin-bottom: 2.2rem;
+    }
+    .dot{
+      color: #7b16ff;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="contenedor">
+
+    <!-- CABECERA -->
+    <header>
+      <div class="logo">
+        HUGO WINSTON THEME
+      </div>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Tags</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <div class="autor">
+         <p><img class="avatar" src="../Imagenes/author.png" alt="">
+       <span class="negrita">Winston Smith </span>Writer & Futurist</p>
+      </div>
+      <h1>You don't start out writing good stuff<span class="dot">.</span></h1>
+      <p class="texto-largo">
+        The hallway smelt of boiled cabbage and old rag mats. At one end of it a coloured poster, too large for indoor
+        display, had been tacked to the wall. It depicted simply an enormous face, more than a metre wide: the face of a
+        man of about forty-five, with a heavy black moustache and ruggedly handsome features. Winston made for the
+        stairs. It was no use trying the lift.
+      </p>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+      <ul>
+        <li><a href=""><img class="iconos" src="../Imagenes/twitter.svg" alt=""></a></li>
+        <li><a href=""><img class="iconos" src="../Imagenes/github.svg" alt=""></a></li>
+        <li><a href=""><img class="iconos" src="../Imagenes/linkedin.svg" alt=""></a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+
+</html>
