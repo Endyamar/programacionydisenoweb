@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Endyamar</title>
+    <style>
+        html {
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .menu-fixed {
+            position: fixed;
+            left: 20vw;
+            margin: 0 auto;
+            width: 60vw;
+            height: 5rem;
+            background-color: darkred;
+            display: inline-flex;
+        }
+
+        .titulo {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            padding-top: 0.3rem;
+            margin-top: 1rem;
+            margin-left: 2rem;
+            height: 3rem;
+            border: 1px solid blue;
+        }
+
+        .titulo a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .vacio {
+            margin: 0 auto;
+            text-align: center;
+            height: 100%;
+            width: 10vw;
+            border: 1px dashed blue;
+        }
+
+        .rrss {
+            margin-top: 1rem;
+            margin-right: 2rem;
+            height: 3rem;
+            border: 1px solid yellow;
+        }
+
+        .rrss-iconos {
+            font-size: 1.7rem;
+            margin-left: 0.8rem;
+            display: inline-block;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        header {
+            width: 60vw;
+            height: 60vh;
+            margin: 0 auto;
+        }
+
+        nav {
+            width: 60vw;
+            background-color: rgba(255, 255, 255, 0.535);
+            margin: 1rem auto;
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-sizing: border-box;
+
+        }
+
+        nav ul li {
+            border-radius: 5px;
+            padding: 0.3rem 0.6rem;
+            background-color: darkred;
+            display: inline-block;
+            margin-right: 2rem;
+        }
+
+        nav ul li:hover {
+            background-color: rgb(65, 65, 65);
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        /* Estilos de clase */
+        .fondo {
+            width: 60%;
+            height: 52vh;
+            margin: 0 auto;
+
+        }
+
+        .logo {
+            width: 60vw;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 7rem;
+        }
+
+        .contenido {
+            border: 2px solid yellowgreen;
+            background-color: rgba(48, 0, 0, 0.553);
+            background-image: url("../Imagenes/2149282421.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .subtitulo {
+            margin: 0 auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.4rem;
+            padding-top: 2.5rem;
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+        .red {
+            color: rgb(255, 255, 255);
+        }
+
+        main {
+            background-color: rgb(0, 0, 0, 0.535);
+        }
+
+        section {
+            width: 60vw;
+            margin: 0 auto;
+            display: inline-flex;
+        }
+
+        aside {
+            width: 6.5vw;
+            padding-left: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+            text-align: justify;
+        }
+
+        article {
+            background-color: rgb(197, 197, 197);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 2rem;
+            width: 45.5vw;
+            border-radius: 15px;
+        }
+
+        .leer-mas {
+            padding-top: 1rem;
+            text-align: right;
+            
+        }
+
+        .leer-mas a{
+            color: darkred;
+            text-decoration: none;
+        }
+
+        .leer-mas a:hover{
+            color: rgb(14, 14, 14);
+        }
+
+
+
+        h2 {
+            padding-bottom: 0.7rem;
+        }
+
+        article ul li {
+            border-radius: 5px;
+            margin-right: 0.8rem;
+            margin-top: 0.7rem;
+            padding: 0.3rem;
+            display: inline-block;
+            background-color: rgb(189, 189, 189);
+        }
+
+        article ul li a {
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+            color: rgb(61, 61, 61);
+            text-decoration: none;
+        }
+
+        article ul li a:hover {
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+            color: rgb(255, 255, 255);
+        }
+
+        .tag-etiquetas {
+            font-size: 0.8rem;
+        }
+
+        footer {
+            margin: 0 auto;
+            width: 60vw;
+            height: 15vh;
+            border: 2px solid salmon;
+            text-align: center;
+            padding-top: 2rem;
+            background-color: darkred;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        footer section {
+            width: 50vw;
+            display: inline-flex;
+        }
+
+        .copyright {
+            margin: 0 auto;
+        }
+
+
+
+        .lista-enlaces-boton {
+            padding: 0.6rem;
+            list-style: none;
+        }
+
+        .lista-enlaces-boton:hover {
+            background-color: rgb(53, 53, 53);
+            border-radius: 5px;
+        }
+
+        .lista-enlaces-boton a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .lista-enlaces-boton a:hover {
+            background-color: rgb(53, 53, 53);
+            border-radius: 5px;
+        }
+
+        .logo-cuartito {
+            width: 15vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-fixed">
+        <div class="titulo">
+            <p><a href="www.elcuartitodelosroles.com">El Cuartito de los Roles</a></p>
+        </div>
+        <div class="vacio"></div>
+        <div class="rrss">
+            <ul>
+                <li class="rrss-iconos"><a href=""><i class="fa-brands fa-instagram"
+                            style="color: rgb(255, 255, 255);"></i></a></li>
+                <li class="rrss-iconos"><a href=""><i class="fa-brands fa-bluesky"
+                            style="color: rgb(255, 255, 255);"></i></a></li>
+                <li class="rrss-iconos"><a href=""><i class="fa-brands fa-telegram"
+                            style="color: rgb(255, 255, 255);"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="fondo">
+        <div class="contenido">
+            <header>
+                <div class="logo">
+                    <img class="logo-cuartito" src="../Imagenes/logo300.png" alt="">
+                    <p class="subtitulo">Testeadores de <span class="red">juegos</span> y creativos del <span
+                            class="red">rol</span></p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Artículos</a></li>
+                        <li><a href="">Descargas</a></li>
+                        <li><a href="">Nosotros</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+            <section>
+                <aside>
+                    <p>Entradas blog:</p>
+                    <ul>
+                        <li><a href="">Nombre 1</a></li>
+                        <li><a href=""></a>Nombre 2</li>
+                        <li><a href=""></a>Nombre 3</li>
+                        <li><a href=""></a>Nombre 4</li>
+                        <li><a href=""></a>Nombre 5</li>
+                        <li><a href=""></a>Nombre 6</li>
+                    </ul>
+                </aside>
+                <div class="entradas-blog">
+                    <article>
+                        <h2>Juegos de rol Indies</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate veritatis ullam
+                            quas
+                            nemo voluptate ad, quasi rem dignissimos explicabo expedita minima asperiores accusamus
+                            perferendis voluptas dolorem odit sapiente ex. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Voluptas aliquam explicabo, voluptatibus, similique sed nulla suscipit
+                            non, ab
+                            accusamus harum nisi sequi dolores fugiat quia recusandae tempore dolorum natus ipsum. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Est tenetur iusto quos repudiandae quo?
+                            Harum
+                            deserunt explicabo incidunt debitis eum! Nobis ut esse quam amet necessitatibus omnis
+                            dolorem
+                            eius quo?</p>
+                        <p class="leer-mas"><a href="">Leer completo...</a></p>
+                        <p class="tag-etiquetas">Etiquetas:</p>
+                        <ul>
+                            <li class="etiquetas"><a href=""><i class="fa-regular fa-user"
+                                        style="color: rgb(52, 52, 52);"></i> Endyamar</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-solid fa-book-open"
+                                        style="color: rgb(52, 52, 52);"></i> Manual</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-solid fa-dice-d20"
+                                        style="color: rgb(52, 52, 52);"></i>D20</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-brands fa-d-and-d"
+                                        style="color: rgb(52, 52, 52);"></i>Dungeons & Dragons</a></li>
+                        </ul>
+
+                    </article>
+
+                    <article>
+                        <h2>Juegos de rol Indies</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate veritatis ullam
+                            quas
+                            nemo voluptate ad, quasi rem dignissimos explicabo expedita minima asperiores accusamus
+                            perferendis voluptas dolorem odit sapiente ex. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Voluptas aliquam explicabo, voluptatibus, similique sed nulla suscipit
+                            non, ab
+                            accusamus harum nisi sequi dolores fugiat quia recusandae tempore dolorum natus ipsum. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Est tenetur iusto quos repudiandae quo?
+                            Harum
+                            deserunt explicabo incidunt debitis eum! Nobis ut esse quam amet necessitatibus omnis
+                            dolorem
+                            eius quo?</p>
+                        <p class="leer-mas"><a href="">Leer completo...</a></p>
+                        <p class="tag-etiquetas">Etiquetas:</p>
+                        <ul>
+                            <li class="etiquetas"><a href=""><i class="fa-regular fa-user"
+                                        style="color: rgb(52, 52, 52);"></i> Endyamar</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-solid fa-book-open"
+                                        style="color: rgb(52, 52, 52);"></i> Manual</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-solid fa-dice-d20"
+                                        style="color: rgb(52, 52, 52);"></i>D20</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-brands fa-d-and-d"
+                                        style="color: rgb(52, 52, 52);"></i>Dungeons & Dragons</a></li>
+                        </ul>
+
+                    </article>
+
+                    <article>
+                        <h2>Juegos de rol Indies</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate veritatis ullam
+                            quas
+                            nemo voluptate ad, quasi rem dignissimos explicabo expedita minima asperiores accusamus
+                            perferendis voluptas dolorem odit sapiente ex. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Voluptas aliquam explicabo, voluptatibus, similique sed nulla suscipit
+                            non, ab
+                            accusamus harum nisi sequi dolores fugiat quia recusandae tempore dolorum natus ipsum. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Est tenetur iusto quos repudiandae quo?
+                            Harum
+                            deserunt explicabo incidunt debitis eum! Nobis ut esse quam amet necessitatibus omnis
+                            dolorem
+                            eius quo?</p>
+                        <p class="leer-mas"><a href="">Leer completo...</a></p>
+                        <p class="tag-etiquetas">Etiquetas:</p>
+                        <ul>
+                            <li class="etiquetas"><a href=""><i class="fa-regular fa-user"
+                                        style="color: rgb(52, 52, 52);"></i> Endyamar</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-solid fa-book-open"
+                                        style="color: rgb(52, 52, 52);"></i> Manual</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-solid fa-dice-d20"
+                                        style="color: rgb(52, 52, 52);"></i>D20</a></li>
+                            <li class="etiquetas"><a href=""><i class="fa-brands fa-d-and-d"
+                                        style="color: rgb(52, 52, 52);"></i>Dungeons & Dragons</a></li>
+                        </ul>
+
+                    </article>
+
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section>
+                <div class="enlaces-bottom">
+                    <p>
+                    <ul>
+                        <li class="lista-enlaces-boton"><a href=""> Enlace 1</a></li>
+                        <li class="lista-enlaces-boton"><a href=""> Enlace 2</a></li>
+                        <li class="lista-enlaces-boton"><a href=""> Enlace 3</a></li>
+                        <li class="lista-enlaces-boton"><a href=""> Enlace 4</a></li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="copyright">
+                    <p>
+                        El Cuartito de los Roles - 2026
+                    </p>
+                </div>
+
+
+            </section>
+        </footer>
+
+    </div>
+</body>
+
+</html>

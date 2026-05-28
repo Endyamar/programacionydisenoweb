@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .padre {
+            width: 500px;
+            height: 500px;
+            border: 2px solid blue;
+            position: relative;
+        }
+
+        .hijo {
+            top: 30px;
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            
+        }
+
+        .nieto {
+            background-color: brown;
+            height: 100px;
+            width: 100px;
+            top: 5px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="padre">
+        <div class="hijo"></div>
+        <div class="nieto"></div>
+    </div>
+</body>
+
+</html>
