@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralax 01</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* ESTILOS DE ELEMENTO */
+
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 6.5rem;
+            position: fixed;
+            z-index: 1000;
+            background-color: darkred;
+        }
+
+        section {
+            color: white;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+
+            background-attachment: fixed;
+
+            position: relative;
+
+        }
+
+        h1 {
+            font-size: 5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        /* ESTILOS DE CLASES */
+
+        .primero {
+            background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9xlyM3XEJq29ANjxqErP2YlDJl2RRL-jT8pRePvA04KfYADh9H03iNvQr4frGpX5vWlSRcoC2fg_W2LwzUzuAfX0hXROEI9kOOn1jN5AR3hGh5dHODEIBGDAYoLaGMh2C7WFt3GhjrU6-/s1600/IMG-20170217-WA0013.jpg");
+        }
+
+        .segundo {
+            background-image: url("../Imagenes/Galope.jpg");
+        }
+
+        .tercero {
+            background-image: url("../Imagenes/TraumaUnit_RN004_noticia_arteinterior2.jpg");
+        }
+
+        .cuarto {
+            background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrUPVLbQRGSxhttQgY62RX9hSiHsJ6qunVdoyZY1k_St5TmhYKMLlIS_VqI5kG60Lfevd2rB2C5Ca5GsjQc0-7_k_mleQGFV9GPXHh2vqFn92vFoJ91iEYP8HWQrdyRfGR6wraL7eo65OO/w1200-h630-p-k-no-nu/Greenscape.jpg");
+        }
+
+        .contenido {
+            background-color: rgba(0, 0, 0, 0.853);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            box-shadow:
+                0 0 10px rgba(255, 255, 255, 0.3),
+                0 0 30px rgba(255, 255, 255, 0.3);
+            display: inline-flex;
+        }
+
+        .arriba {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.293);
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 0.3rem 0.6rem;
+        }
+
+        .arriba a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .rrss-iconos {
+            display: inline-block;
+            font-size: 2rem;
+            background-color: white;
+            padding: 0.3rem;
+            border-radius: 25px;
+            margin-left: 1rem;
+
+        }
+
+        .contenedor-fixed {
+            position: fixed;
+            display: inline-flex;
+            width: 95%;
+            left: 1.5%;
+            margin: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .titulo-web {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px black;
+            padding-top: 0.2rem;
+        }
+
+        .titulo-web a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu-deverdad {
+            display: inline-flex;
+        }
+
+        .menu-deverdad a {
+            color: white;
+            font-size: 1.3rem;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            margin-top: 0.7rem;
+            background-color: rgba(0, 0, 0, 0.293);
+            padding: 0.3rem 0.6rem;
+            border-radius: 10px;
+        }
+
+        .menu-deverdad a:hover {
+            color: black;
+            background-color: rgba(255, 255, 255, 0.293);
+        }
+
+
+        .vacio {
+            width: 6rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .imagen01{
+            height: 40vh;
+            margin-left: 1.5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-fixed">
+            <div class="titulo">
+                <p class="titulo-web"><a href="">El Cuartito de los Roles</a></p>
+            </div>
+            <div class="vacio">
+                <p class="menu-deverdad">
+                    <a href="">Home</a>
+                    <a href="">Posts</a>
+                    <a href="">Descargables</a>
+                    <a href="">Nosotros</a>
+                    <a href="">Contacto</a>
+                </p>
+            </div>
+            <nav>
+                <li class="rrss-iconos"><a href="https://www.instagram.com/cuartitoroles" target="_blank"><i
+                            class="fa-brands fa-instagram" style="color: rgb(0, 0, 0);"></i></a>
+                </li>
+                <li class="rrss-iconos"><a href="https://bsky.app/profile/cuartitoroles.bsky.social" target="_blank"><i
+                            class="fa-brands fa-bluesky" style="color: rgb(0, 0, 0);"></i></a>
+                </li>
+                <li class="rrss-iconos"><a href=""><i class="fa-brands fa-telegram"
+                            style="color: rgb(0, 0, 0);"></i></a>
+                </li>
+            </nav>
+        </div>
+    </header>
+
+    <div class="arriba">
+        <a href="#">
+            <p>VOLVER</p>
+        </a>
+    </div>
+
+    <section class="primero">
+        <div class="contenido">
+            <div>
+            <h1>
+                Unrealms
+            </h1>
+            <p>¡Mentira! ¡Todo es mentira! Las grandes guerras, el lanzamiento de los cohetes al espacio, ¡hasta los teléfonos móviles! Todo. La historia de la evolución de la humanidad es una fachada que encubre una sobrecogedora verdad: entre nosotros viven seres de leyenda y mitología que esconden su verdadera naturaleza bajo la forma de personas corrientes. Los llamamos «irreales». Junto a los humanos capaces de contemplar la realidad tal y como es o en oposición a ellos, librarán una guerra milena...
+
+</p>
+            </div>
+            <div><img class="imagen01" src="https://comicstores.es/imagenes_grandes/9788416/978841678036.JPG"
+                alt="">
+                </div>
+        </div>
+
+    </section>
+
+    <section class="segundo">
+        <div class="contenido">
+            <div>
+            <h1>Amanecer Muerto</h1>
+            <p>íCuidado! El sol comienza a emerger por el horizonte y con él los primeros podridos se desentierran por todo el Oeste americano. Desde aquel aciago día de 1869 en Promontory, cuando la maldición levantó a los no muertos de sus tumbas, los seres vivos han intentado sobrevivir a una amenaza inagotable. Pero no fueron las únicas criaturas que llegaron con la plaga: algunas mujeres comenzaron a convertirse en luciérnagas, humanas que desarrollaron poderes paranormales tras volverse inmunes a lamordedura de los no muertos.En este escenario, donde la muerte aguarda, ni siquiera el peligro de vivir cada día un apocalipsis puede obligar a los colonos y buscadores de oro a abandonar lo que consideran su Destino manifi esto. Protegidos en las nuevas ciudades amuralladas descansan durante el día hasta que cae el sol.
+
+            </p>
+        </div>
+            <div>
+                <img class="imagen01" src="https://m.media-amazon.com/images/I/61166ped2UL._AC_UF1000,1000_QL80_.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="tercero">
+        <div class="contenido">
+            <div>
+            <h1>Trauma Unit</h1>
+            <p>En el Detroit de 2066, el corazón de un mundo ciberpunk donde las megacorporaciones campan a sus anchas mientras los desfavorecidos tratan de sobrevivir, los servicios públicos son una quimera y hasta los derechos más elementales están reservados a aquellos que se los pueden permitir. Empresas como Omniservice ponen a disposición de sus clientes las Unidades Trauma para asistir emergencias médicas en cualquier parte de la ciudad. Como miembro de una de estas unidades, con Trauma Unit podrás interpretar a un médico, un conductor, un experto cibernético, un responsable de seguridad o un «correturnos», un especialista liberal dispuesto a resolver las más extrañas complicaciones. Cuando un cliente solicita ayuda, es momento de intervenir rápidamente y salvarle la vida o no cobrarás el encargo. Cada salida será una excusa perfecta para enfrentarte o sobrevivir al sistema, armado con tu idealismo, tus implantes cibernéticos y tu conexión a la red.
+            </p>
+        </div>
+            <div>
+                <img class="imagen01" src="https://www.generacionx.es/Imagenes/Articulos/9788417379254.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+        <section class="cuarto">
+        <div class="contenido">
+            <div>
+            <h1>Greenscape</h1>
+            <p>Durante demasiado tiempo, la humanidad utilizó la naturaleza pensando solo en sus propios fines. Hoy, Big Mamma se ha despertado y está muy, muy enfadada.¡Bienvenidos al universo greenpunk! En el futuro, la civilización humana fue destruida casi por completo y, esta vez, nosotros somos la presa. Pero áun queda esperanza. Unos pocos valientes han estudiado las cintas kodakianas del pasado, han comprendido las enseñanzas de la naturaleza o, simplemente, pretenden sobrevivir en un mundo tan verde y hostil como jamás hayas podido imaginar. El mundo de Greenscape discurre en un futuro distópico y postapocalíptico, resultado de un cataclismo provocado por la madre naturaleza en respuesta a la irresponsable conducta del ser humano.
+
+¿Te atreverás a unirte a ellos?
+            </p>
+        </div>
+            <div>
+                <img class="imagen01" src="https://www.juegamestore.es/cdn/shop/files/savageworlds_greenscaoe_e84c0af3-3cd7-4c5e-877f-c2267dc1af4e.jpg?v=1742384134" alt="">
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
