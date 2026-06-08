@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Classless</title>
+
+    <style>
+        html{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+        *{
+            margin: 0;
+            padding: 0;
+            color: rgb(66, 66, 66);
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            width: 45vw;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 5rem 0;
+            font-size: 1.2rem;
+        }
+        header ul{
+            display: flex;
+
+        }
+
+        header ul li{
+            list-style: none;
+            padding-right: 0.5rem;
+        }
+
+        header ul li a{
+            color: rgb(57, 120, 255);
+            padding-right: 0.5rem;
+            text-decoration: none;
+        }
+
+        header ul li a:hover{
+            text-decoration: underline ;
+        }
+
+        .negrita{
+            font-weight: bold;
+        }
+        h1{
+            font-size: 2.8rem;
+            color: rgb(45, 45, 85);
+            line-height: 2.5rem;
+        }
+
+        .profile{
+            width: 350px;
+        margin-top: 30px;
+        }
+
+        .profile:hover{
+            width: 365px;
+        }
+
+        .uno{
+            text-align: center;
+        }
+        .subtitulo{
+            padding-top: 15px;
+            font-size: 1.5rem;
+            color: rgb(45, 45, 85);
+        }
+
+        .menu{
+            font-size: 1.5rem;
+            margin-top: 2vh;
+        }
+
+        .menu a{
+            color: rgb(57, 120, 255);
+            text-decoration: none;
+
+        }
+        section{
+            padding-top: 5vh;
+        }
+        h2{
+            font-size: 2rem;
+            color: rgb(45, 45, 85);
+        }
+        .hiperlink{
+            text-decoration: none;
+                        color: rgb(57, 120, 255);
+        }
+
+        .hiperlink:hover{
+            text-decoration: underline;
+        }
+        .lineabajo{
+            text-decoration: underline;
+            text-decoration-color: rgb(57, 120, 255);
+        }
+        p{
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+        .negroazul{
+            font-weight: bold;
+            color: rgb(45, 45, 85);
+        }
+        section ul li{
+            padding: 0.2rem;
+            font-size: 1.1rem;
+        }
+        .ejemplo{
+            
+        }
+        .rojo{
+            color: red;
+            font-size: 0.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 800;
+        }
+
+               .ejemplo{
+            color: rgb(45, 45, 85);
+            font-size: 0.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 800;
+            line-height: 1.5rem;
+        }
+        .azul{
+        color: rgb(57, 120, 255);
+
+        }
+
+        footer{
+            padding: 50px 0; 
+            margin: 0 auto;
+
+            font-size: 1.2rem;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+<p><span class="negrita">Hugo Classless</span></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><span class="negrita lineabajo"><a href="">Home</a></span>|</li>
+                    <li><a href="">Posts</a>|</li>
+                    <li><a href="">Projects</a>|</li>
+                    <li><a href="">Contact</a>|</li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Hugo Classless: A Theme for <br>Any Classless CSS Framework</h1>
+            <section class="uno">
+                <img class="profile" src="../Imagenes/profile.png" alt="">
+                <p class="subtitulo"><span class="negrita">Developed by M.Ozan Unal</span></p>
+                <p class="menu"><span class="negrita"><a href="">Github</a> | <a href="">Twitter</a> | <a href="">GScholar</a></span></p>
+            </section>
+            <section>
+                <h2>See it in Action</h2>
+                <p ><a class="hiperlink negrita" href="">View on GitHub →</a></p>
+                <p>Welcome to <span class="negroazul">Hugo Classless</span>, a theme foundation designed to be minimal, semantic, and incredibly
+                    flexible. Instead of locking you into one design, this theme generates pure, well-structured HTML.
+                    This means you can point it to <span class="negroazul">any classless CSS framework</span>—like Pico, Water.css, or Simple.css—and
+                    instantly adopt its appearance.</p>
+                <p>The best way to understand the concept is to try it yourself. <span class="negroazul">Use the theme switcher in the header</span> to
+                    dynamically change the look and feel of this entire site. You can also <span class="negroazul">toggle between light, dark,
+                    and system mode</span> using the icon button in the navbar. Watch how every element adapts instantly. This
+                    is the power of classless CSS!</p>
+            </section>
+            <section>
+                <h2>Explore the Demo</h2>
+                <p>This site demonstrates how the theme handles common content types and features.</p>
+                <ul>
+                    <li ><a class="hiperlink negrita" href="">Posts</a>: See examples of standard blog posts.</li>
+                    <li><a class="hiperlink negrita" href="">Markdown Syntax</a>: A test page showcasing how every Markdown element is rendered.
+                    </li>
+                    <li><a class="hiperlink negrita" href="">Math Typesetting</a>: A demo of the built-in KaTeX support for beautiful formulas.
+                    </li>
+                    <li><a class="hiperlink negrita" href="">Standard Page</a>s: View other content types like project and contact pages.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Get Started in 60 Seconds</h2>
+                <p>Ready to use this for your own site? It’s easy.</p>
+                <ol>
+                    <li><span class="negrita">Add the theme:</span>
+                        <p class="ejemplo">git submodule add \<br>
+                        https://github.com/mozanunal/hugo-classless.git \<br>
+                        themes/hugo-classless</p></li>
+                    <li><span class="negrita">Configure</span> <span class="rojo">hugo.yml</span>:
+            
+                        <p class="ejemplo"><span class="azul">theme:</span> "hugo-classless"<br>
+
+                        <span class="azul">params:</span><br>
+                        
+                        # Single theme with dark mode <support:br></support:br>
+                        <span class="azul">themeBase:</span> "css/base.css"<br>
+                        <span class="azul">themeLight: </span>"css/light.css"<br>
+                        <span class="azul">themeDark:</span> "css/dark.css"</p></li>
+                </ol>
+
+                <p>For full documentation and more configuration options, check out the project on GitHub.</p>
+            </section>
+        </main>
+            <footer>
+        © 2026 John Doe.
+    </footer>
+    </div>
+
+</body>
+
+</html>
