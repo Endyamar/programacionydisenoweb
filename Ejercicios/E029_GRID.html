@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: rgb(36, 36, 36);
+        }
+        .contenedor{
+            padding: 15px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* grid-template-rows: repeat(3,1fr); */
+            /* justify-content: center;
+            align-items: center; */
+            /* place-content:center; te centra el contenido del grid*/
+            gap: 15px;
+            width: 60vw;
+            height: 90vh;
+
+        }
+
+        .contenedor div{
+            background-color: rgb(255, 210, 12);
+            border-radius: 20px;
+            /* min-height: 30vh;    */
+                 
+        }
+        .contenedor .elemento01{
+            /* grid-column-start:1;
+            grid-column-end:3;
+            grid-row-start: 1;
+            grid-row-end: 4; */
+            /* grid-column: 1/3;
+            grid-row: 1/4; */
+            grid-area: 1/1/1/1;
+          background-image: url("../Imagenes/grid/1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+
+        }
+        .elemento02{
+            background-image: url("../Imagenes/grid/2.png");
+                      background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .elemento03{
+            grid-area: 1/3/2/5;
+            background-image: url("../Imagenes/grid/3.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .elemento04{
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+            /* grid-area: 2/1/4/2; */
+            background-image: url("../Imagenes/grid/4.png");
+                 background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .elemento05{
+            grid-area: 2/2/3/4;
+            background-image: url("../Imagenes/grid/5.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .elemento06{
+            grid-area: 3/2/4/4;
+            background-image: url("../Imagenes/grid/7.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .elemento07{
+            background-image: url("../Imagenes/grid/6.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .elemento08{
+            background-image: url("../Imagenes/grid/8.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+    </style>
+
+    <title>Grid | Tercera parte</title>
+</head>
+
+<body>
+<div class="contenedor">
+    <div class="elemento01"></div>
+    <div class="elemento02"></div>
+    <div class="elemento03"></div>
+    <div class="elemento04"></div>
+    <div class="elemento05"></div>
+    <div class="elemento06"></div>
+    <div class="elemento07"></div>
+    <div class="elemento08"></div>
+
+
+</div>
+</body>
+
+</html>

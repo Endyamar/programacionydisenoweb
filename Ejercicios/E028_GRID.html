@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* .contenedor {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+        } */
+        .areas {
+            display: grid;
+            grid-template-areas:
+                "cabeza cabeza cabeza"
+                "lateral principal derecha"
+                "pie pie pie";
+        }
+
+        .cabeza {
+            grid-area: cabeza;
+            background-color: aqua;
+            height: 30vh;
+        }
+
+        .lateral {
+            grid-area: lateral;
+            background-color: blue;
+        }
+
+        .principal {
+            grid-area: principal;
+            background-color: yellow;
+            height: 60vh;
+        }
+
+        .derecha {
+            grid-area: derecha;
+            background-color: violet;
+        }
+
+        .pie {
+            grid-area: pie;
+            background-color: red;
+            height: 10vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="areas">
+            <div class="cabeza">Cabecera</div>
+            <div class="lateral">Lateral</div>
+            <div class="principal">Principal</div>
+            <div class="derecha">Derecha</div>
+            <div class="pie">Pie</div>
+        </div>
+    </div>
+</body>
+
+</html>
