@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            width: 100vw;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        nav {
+            width: 100vw;
+            height: 7vh;
+            background-color: rgba(0, 0, 0, 0.726);
+            color: white;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        nav ul li {
+            font-size: 2vh;
+            display: inline-block;
+            padding: 0 2vw;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .cabeza {
+            min-height: 40vh;
+            text-align: center;
+            color: white;
+            background-image: url("../Imagenes/02/01.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: visible;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 10vh;
+            padding-top: 15vh;
+        }
+
+        .subtitulo {
+            text-transform: uppercase;
+            font-size: 3vh;
+            padding-bottom: 10vh;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns:
+                minmax(20px, 1fr) minmax(0, 1200px) minmax(20px, 1fr);
+            grid-template-areas:
+                ". contenido .";
+            margin: 3vh 0;
+        }
+
+        .contenedor02 {
+            grid-area: contenido;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 25px;
+            column-wrap: wrap;
+        }
+
+        article {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h4 {
+            font-size: 3vh;
+            font-weight: bold;
+            margin-bottom: 1vh;
+        }
+
+        article img {
+            display: block;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .col-ocho {
+            grid-column: span 8;
+        }
+
+        .col-cuatro {
+            grid-column: span 4;
+        }
+
+        .col-seis {
+            grid-column: span 6;
+        }
+
+        .col-tres {
+            grid-column: span 3;
+        }
+
+
+
+        footer {
+            width: 100%;
+            min-height: 5vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3vh 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            margin: 0 1vw;
+        }
+
+        .copy {
+            color: rgb(138, 138, 138);
+            padding-top: 2vh;
+        }
+
+        .texto {
+            padding: 2vh 2vw;
+        }
+
+        @media (max-width:900px){
+            .col-tres,
+            .col-cuatro,
+            .col-seis,
+            .col-ocho{
+                grid-column: span 12;
+            }
+        h1 {
+            font-size: 8vh;
+            line-height: 8vh;
+            padding-top: 15vh;
+        }
+          .subtitulo {
+            font-size: 2.5vh;
+            padding-top: 2vh;
+            padding-bottom: 10vh;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Galería</a></li>
+                    <li><a href="">Artículos</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="cabeza">
+                <h1>Grandes viajes</h1>
+                <p class="subtitulo">Explora el mundo sin límites</p>
+            </div>
+
+        </header>
+        <main>
+            <div class="contenedor02">
+                <article class="col-ocho">
+                    <img src="../Imagenes/02/02.jpg" alt="">
+                    <div class="texto">
+                        <h4>Patatas fritas</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis cumque eius commodi
+                            corporis
+                            debitis, amet hic, explicabo labore, officiis doloremque tenetur vel? Commodi illo magnam
+                            cumque, architecto adipisci neque fugiat!</p>
+                    </div>
+                </article>
+                <article class="col-cuatro">
+                    <img src="../Imagenes/02/03.jpg" alt="">
+                    <div class="texto">
+                        <h4>Macarrones con tomate</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias nostrum rerum doloribus eius
+                            officiis atque saepe, ea necessitatibus unde autem, ipsum repudiandae, cum quis quisquam
+                            adipisci sunt blanditiis voluptatum id.</p>
+                    </div>
+                </article>
+                <article class="col-seis">
+                    <img src="../Imagenes/02/04.jpg" alt="">
+                    <div class="texto">
+                        <h4>Manitas de pescados</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eligendi animi
+                            consectetur
+                            voluptas error corrupti soluta distinctio rem, incidunt vitae asperiores architecto quam.
+                            Labore
+                            porro sapiente, aperiam provident saepe voluptates.</p>
+                    </div>
+                </article>
+                <article class="col-seis">
+                    <img src="../Imagenes/02/05.jpg" alt="">
+                    <div class="texto">
+                        <h4>Arcoíris en adobo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit perferendis obcaecati
+                            officia
+                            quam temporibus laboriosam minus quos debitis! Consequatur exercitationem nobis facere
+                            maiores
+                            libero aut quos consectetur provident voluptates. Labore?</p>
+                    </div>
+                </article>
+                <article class="col-tres">
+                    <img src="../Imagenes/02/06.jpg" alt="">
+                    <div class="texto">
+                        <h4>Piurpurina de fresa</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cum, eos quas consequatur
+                            beatae
+                            totam numquam hic nesciunt necessitatibus perspiciatis sit eum aspernatur molestiae? Aperiam
+                            vel
+                            aliquam dolores nulla ipsa.</p>
+                    </div>
+                </article>
+                <article class="col-tres">
+                    <img src="../Imagenes/02/07.jpg" alt="">
+                    <div class="texto">
+                        <h4>Caballitos de madera</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nisi commodi delectus modi
+                            similique, illo et exercitationem ea quis odit eligendi ab est accusantium. Harum quisquam
+                            quas
+                            voluptas exercitationem veritatis.</p>
+                    </div>
+                </article>
+                <article class="col-tres">
+                    <img src="../Imagenes/02/08.jpg" alt="">
+                    <div class="texto">
+                        <h4>El viaje de la heroína</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum saepe autem laudantium, quas
+                            eum
+                            officiis maiores ab? Odio, numquam. Assumenda, aut error neque pariatur minus officiis vero
+                            adipisci accusantium doloribus?</p>
+                    </div>
+                </article>
+                <article class="col-tres">
+                    <img src="../Imagenes/02/09.jpg" alt="">
+                    <div class="texto">
+                        <h4>Catatonia frita</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ad pariatur quis deserunt
+                            harum
+                            saepe sunt dolorum provident, adipisci eaque quia! Assumenda quos modi rem qui. Qui odio
+                            consequuntur exercitationem.</p>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div class="lista">
+                <p>
+                    <a href="">Quienes somos</a>
+                    <a href="">Publicidades</a>
+                    <a href="">Suscripciones</a>
+                    <a href="">Política de seguridad</a>
+                    <a href="">Cookies</a>
+                    <a href="">Contacto</a>
+                </p>
+                <p class="copy">
+                    2026 Grandes Viajes. Todos los derechos reservados.
+        </footer>
+    </div>
+</body>
+
+</html>

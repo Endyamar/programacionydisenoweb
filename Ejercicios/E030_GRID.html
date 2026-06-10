@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            width: 100vw;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        nav {
+            width: 100vw;
+            height: 7vh;
+            background-color: rgba(0, 0, 0, 0.726);
+            color: white;
+            position: fixed;
+            border: 1px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        nav ul li {
+            font-size: 2vh;
+            display: inline-block;
+            padding-right: 0.8rem;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .cabeza {
+            min-height: 40vh;
+            text-align: center;
+            color: white;
+            background-image: url("../Imagenes/02/01.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid red;
+            overflow: visible;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 10vh;
+            padding-top: 15vh;
+        }
+
+        .subtitulo {
+            text-transform: uppercase;
+            font-size: 3vh;
+            padding-bottom: 10vh;
+        }
+
+        main {
+            width: 100vw;
+            overflow: visible;
+        }
+
+        .contenedor02 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            width: 60vw;
+            margin: 2rem auto;
+            gap: 15px;
+        }
+
+        .cajas {
+            border: 1px solid rgb(160, 160, 160);
+            border-radius: 10px;
+        }
+
+        .box8 {
+            grid-area: 1/1/1/9;
+        }
+
+        .box4 {
+            grid-area: 1/9/1/13;
+        }
+
+        .box6 {
+            grid-area: 2/1/3/7;
+        }
+
+        .box5 {
+            grid-area: 2/7/3/13;
+        }
+
+        .box3 {
+            grid-area: 3/1/4/4;
+        }
+
+        .box2 {
+            grid-area: 3/4/4/7;
+        }
+
+        .box1 {
+            grid-area: 3/7/4/10;
+        }
+
+        .box0 {
+            grid-area: 3/10/4/13;
+        }
+
+        .textbox {
+            padding: 1rem;
+        }
+
+        .imagencaja {
+            width: 100%;
+            max-height: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        footer{
+            width: 100%;
+            height: 10vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: white;
+            margin: 0 1vw;
+        }
+        .copy{
+            color: rgb(138, 138, 138);
+            padding-top: 2vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Galería</a></li>
+                    <li><a href="">Artículos</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="cabeza">
+                <h1>Grandes viajes</h1>
+                <p class="subtitulo">Explora el mundo sin límites</p>
+            </div>
+
+        </header>
+        <main>
+            <div class="contenedor02">
+                <div class="cajas box8">
+                    <img class="imagencaja" src="../Imagenes/02/02.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+                <div class="cajas box4">
+                    <img class="imagencaja" src="../Imagenes/02/03.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+                <div class="cajas box6">
+                    <img class="imagencaja" src="../Imagenes/02/04.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+                <div class="cajas box5">
+                    <img class="imagencaja" src="../Imagenes/02/05.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+                <div class="cajas box3">
+                    <img class="imagencaja" src="../Imagenes/02/06.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+                <div class="cajas box2">
+                    <img class="imagencaja" src="../Imagenes/02/07.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+                <div class="cajas box1">
+                    <img class="imagencaja" src="../Imagenes/02/08.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+                <div class="cajas box0">
+                    <img class="imagencaja" src="../Imagenes/02/09.jpg" alt="">
+                    <p class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias iure
+                        odio alias eius suscipit quod nostrum voluptatem eum incidunt cum ab tempore, rem explicabo
+                        veniam vero. Corrupti, officiis. Ipsa!</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="lista">
+                <p>
+                    <a href="">Quienes somos</a>
+                    <a href="">Publicidades</a>
+                    <a href="">Suscripciones</a>
+                    <a href="">Política de seguridad</a>
+                    <a href="">Cookies</a>
+                    <a href="">Contacto</a>
+                </p>
+                <p class="copy">
+                    2026 Grandes Viajes. Todos los derechos reservados.
+        </footer>
+    </div>
+</body>
+
+</html>
