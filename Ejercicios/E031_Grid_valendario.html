@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        * {
+            color: rgb(68, 0, 0);
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        .fondo {
+            /* background-color: antiquewhite; */
+        }
+
+        .contenedor {
+            margin: 5vh auto;
+            width: 60vw;
+            background-color: rgba(255, 255, 255, 0.452);
+            padding: 2vh 1vw;
+            border: 1px double rgba(0, 0, 0, 0.308);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.432);
+        }
+
+        header {
+            text-align: center;
+            padding-top: 1vh;
+        }
+
+        .cabeza {
+            padding-bottom: 2vh;
+        }
+
+        h1 {
+            margin-top: 3vh;
+            font-size: 8vh;
+        }
+
+        .subtitulo {
+            font-size: 2vh;
+            font-style: italic;
+            margin-bottom: 4vh;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1vh;
+            font-weight: bold;
+        }
+
+        hr {
+            width: 60vw;
+            border: 1px solid rgba(128, 128, 128, 0.247);
+            margin: 0 auto;
+        }
+
+        .separacion {
+            margin-bottom: 1vh;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat (7, 1fr);
+            grid-column: span 1;
+            gap: 10px;
+        }
+
+        .dia {
+            display: flex;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid grey;
+                        border-radius: 10px;
+
+            background-color: rgba(245, 245, 220, 0.527);
+            height: 14vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lunes01 {
+            grid-area: 1/1/1/1;
+        }
+
+        .martes01 {
+            grid-area: 1/2/1/3;
+        }
+
+        .miercoles01 {
+            grid-area: 1/3/1/4;
+        }
+
+        .jueves01 {
+            grid-area: 1/4/1/5;
+        }
+
+        .viernes01 {
+            grid-area: 1/5/1/6;
+        }
+
+        .sabado01 {
+            grid-area: 1/6/1/7;
+        }
+
+        .domingo01 {
+            grid-area: 1/7/1/8;
+        }
+
+        .dia-rojo {
+            display: flex;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid grey;
+            border-radius: 10px;
+            background-color: rgba(250, 128, 114, 0.432);
+            height: 14vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .evento{
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fondo">
+        <div class="contenedor">
+            <header>
+                <div class="cabeza">
+                    <h1>
+                        Octubre 1897
+                    </h1>
+                    <p class="subtitulo">
+                        Registro de observaciones del viajero
+                    </p>
+                    <hr>
+                </div>
+                <nav>
+                    <p>Lun</p>
+                    <p>Mar</p>
+                    <p>Mié</p>
+                    <p>Jue</p>
+                    <p>Vie</p>
+                    <p>Sáb</p>
+                    <p>Dom</p>
+                </nav>
+                <hr class="separacion">
+            </header>
+            <main>
+                <div class="lunes01"></div>
+                <div class="dia martes01">1</div>
+                <div class="dia miercoles01">2</div>
+                <div class="dia jueves01">3</div>
+                <div class="dia viernes01">4</div>
+                <div class="dia sabado01">5</div>
+                <div class="dia-rojo domingo01">6</div>
+
+                <div class="dia lunes02">7</div>
+                <div class="dia martes02">8</div>
+                <div class="dia miercoles02">9</div>
+                <div class="dia jueves02">10</div>
+                <div class="dia viernes02">11</div>
+                <div class="dia sabado02">12</div>
+                <div class="dia-rojo domingo02">13</div>
+
+                <div class="dia lunes03">14</div>
+                <div class="dia martes03">15</div>
+                <div class="dia miercoles03">16</div>
+                <div class="dia jueves03">17</div>
+                <div class="dia viernes03">18</div>
+                <div class="dia sabado03">19</div>
+                <div class="dia-rojo domingo03">20</div>
+
+                <div class="dia lunes04">21</div>
+                <div class="dia martes04">22</div>
+                <div class="dia miercoles04">23</div>
+                <div class="dia jueves04">24</div>
+                <div class="dia viernes04">25</div>
+                <div class="dia sabado04">26</div>
+                <div class="dia-rojo domingo04">27</div>
+
+                <div class="dia lunes05">28</div>
+                <div class="dia martes05">29</div>
+                <div class="dia miercoles05">30</div>
+                <div class="dia jueves05">31</div>
+                <div class="viernes05"></span></div>
+                <div class="sabado05"></span></div>
+                <div class=" domingo05"></span></div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
