@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        html {}
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .cabecera {
+            background-color: rgb(24, 24, 48);
+            display: flex;
+            color: rgba(255, 255, 255, 0.795);
+            font-size: 1.5vh;
+            width: 100%;
+            height: 4.8vh;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .margen01 {
+            margin: 0 1vw;
+        }
+
+        .new {
+            font-size: 1.2vh;
+            background-color: rgba(128, 128, 128, 0.322);
+            padding: 0.4vh 0.3vw;
+        }
+
+        .estrella {
+            padding: 0.4vh 0.3vw;
+            font-size: 1.2vh;
+            color: black;
+            background-color: rgb(202, 202, 202);
+        }
+
+        header {
+            position: sticky;
+            height: 8vh;
+            background-color: rgba(255, 255, 255, 0.918);
+            top: 0;
+            box-shadow: 0 1px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            max-width: 80vw;
+            padding: 1.7vh 0;
+            margin: 0 auto;
+            padding-top: 2.5vh
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 2.5vh;
+        }
+
+        nav a {
+            color: rgb(44, 44, 44);
+            text-decoration: none;
+            font-size: 2vh;
+            margin: 0 1vw;
+            font-weight: 500;
+
+        }
+
+        .download {
+            font-size: 2vh;
+        }
+
+        .download a {
+            color: black;
+            padding: 0.8vh 0.6vw;
+        }
+
+        .downbotton {
+            color: black;
+            text-decoration: none;
+            border: 1px solid grey;
+            padding: 1vh 1vw;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .downbotton:hover {
+        background-color: rgba(209, 209, 209, 0.356);
+
+        }
+
+       .slidebotton:hover {
+            background-color: rgba(209, 209, 209, 0.356);
+            border-radius: 5px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns:
+                minmax(20px, 1fr) minmax(0, 1200px) minmax(20px, 1fr);
+            grid-template-areas:
+                ". contenido .";
+            height: 200vh;
+        }
+
+        .contenedor {
+            grid-area: contenido;
+            border: 1px solid blue;
+        }
+
+        .hero {
+            min-width: 62vw;
+            text-align: center;
+            justify-content: center;
+            margin: 10vh auto;
+            border: 1px solid red;
+        }
+        
+        h1 {
+            font-size: 7vh;
+            font-weight: bold;
+            line-height: 7vh;
+}
+
+        .morado {
+            color: rgb(126, 66, 182);
+        }
+
+        
+        .imagenresponsive{
+
+
+        }
+
+        .hero div img{
+            width: 100%;
+            border: 1px solid greenyellow;
+            max-width: 63rem;
+            /* margin: 10vh auto; */
+            margin-top: 10vh;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .sobrenosotros {
+            color: rgb(68, 68, 252);
+            text-transform: uppercase;
+            font-size: 2vh;
+            font-weight: bold;
+        }
+
+        .subtitulo {
+            font-size: 2.5vh;
+            color: grey;
+            margin: 2vh auto;
+            width: 100%;
+            max-width: 63rem;
+        }
+        .estadisticas{
+            display: grid;
+            grid-template-columns: repeat (12, 1fr);
+        }
+        .col0{
+            grid-column: span 12;
+            text-align: center;
+        }
+        .col1{
+            grid-area: 2/1/2/4;
+                        text-align: center;
+
+        }
+        .col2{
+            grid-area: 2/4/2/7;
+                        text-align: center;
+
+        }
+        .col3{
+            grid-area: 2/7/2/10;
+                        text-align: center;
+
+        }
+        .col4{
+            grid-area: 2/10/2/13;
+            text-align: center;
+
+        }
+        h2{
+            font-size: 4.5vh;
+            margin-bottom: 6vh;
+        }
+        .azul{
+            color: rgb(15, 83, 230);
+            font-size: 8vh;
+            font-weight: bold;
+        }
+        .estadisticas div p{
+            text-transform: uppercase;
+            font-size: 2.5vh;
+            line-height: 4vh;
+        }
+
+        .separador01{
+            height: 10vh;
+            background-color: rgb(172, 172, 172);
+            width: 1px;
+            grid-area: 2/4/2/4;
+        }
+
+        .separador02{
+            height: 10vh;
+            background-color: rgb(172, 172, 172);
+            width: 1px;
+            grid-area: 2/7/2/7;
+        }
+
+        .separador03{
+            height: 10vh;
+            background-color: rgb(172, 172, 172);
+            width: 1px;
+            grid-area: 2/10/2/10;
+        }
+
+        @media (max-width:1200px){
+            .main{
+                grid-column: span 3;
+            }
+            .col1{
+                grid-area: 2/1/2/7;
+                        margin: 3vh;
+
+            }
+            .col2{
+                grid-area: 2/7/2/13;
+                margin: 3vh;
+            }
+            .col3{
+                grid-area: 3/1/3/7;
+                margin: 3vh;
+            }
+            .col4{
+                grid-area: 3/7/3/13;
+                margin: 3vh;
+            
+            margin: 3vh;
+        }
+            .separador01{
+            grid-area: 2/7/2/7;
+        }
+
+        .separador02{
+            grid-area: 3/7/3/7;
+        }
+
+        .separador03{
+            width: 0px;
+            
+        }
+
+                @media (max-width:600px){
+            .main{
+                grid-column: span 3;
+            }
+            .col1,
+            .col2,
+            .col3,
+            .col4{
+            grid-column: span 12;
+            margin: 3vh;
+        }
+        
+        .separador01,
+        .separador02,
+        .separador03{
+            width: 0px;
+        }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+
+    <div class="cabecera">
+        <p class="margen01"><span class="new">NEW</span> Astro v6 is now avaible! »</p>
+        <p class="margen01 estrella"> <i class="fa-brands fa-github"></i>Stars</p>
+    </div>
+
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <p>🚀 AstroWind</p>
+            </div>
+            <nav>
+                <a href="">Homes ∨</a>
+                <a href="">Pages ∨</a>
+                <a href="">Landing ∨</a>
+                <a href="">Blog ∨</a>
+                <a href="">Widgets</a>
+
+            </nav>
+            <div class="download">
+                <a class="slidebotton" href=""><i class="fa-regular fa-sun"></i></a>
+                <a class="slidebotton" href=""><i class="fa-solid fa-wifi"></i></a>
+                <a class="downbotton" href="">Download</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+
+    <main>
+        <div class="contenedor">
+            <section class="hero">
+                <p class="sobrenosotros">About us</p>
+                <h1>Elevate your online presence with our <span class="morado">Beautiful Website Templates</span></h1>
+                <p class="subtitulo">Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor
+                    nisi lectus non augue. Donec quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex
+                    a nunc
+                    convallis, et lobortis nisi tempus. Suspendisse vitae nisi eget tortor luctus maximus sed non
+                    lectus.</p>
+                <div class="imagenresponsive"><img src="../Imagenes/03/01.avif" alt=""></div>
+            </section>
+            <section class="estadisticas">
+                <h2 class="col0">Statistics abouyt us</h2>
+                <div class="col1"><p><span class="azul">4</span><br>Offices</p></div>
+                <div class="separador01"></div>
+                <div class="col2"><p><span class="azul">248</span><br>Employees</p></div>
+                <div class="separador02"></div>
+                <div class="col3"><p><span class="azul">12</span><br>Templates</p></div>
+                <div class="separador03"></div>
+                <div class="col4"><p><span class="azul">24</span><br>Awards</p></div>
+                            
+            </section>
+            <section class="plantillas">
+
+            </section>
+            <section class="valores">
+
+            </section>
+            <section class="logros">
+
+            </section>
+            <section class="locales">
+
+            </section>
+            <section class="soporte">
+
+            </section>
+        </div>
+    </main>
+
+    <!-- PIE -->
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+</html>
