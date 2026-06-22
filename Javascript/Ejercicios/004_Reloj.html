@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css" />
+    <style>
+        @font-face {
+    font-family: 'sevegment';
+        src: url('../../ttf/fs-sevegment.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+        p {
+            font-family: 'sevegment';
+            font-size: 20vh;
+            line-height: 1vh;
+        }
+        body{
+            text-align: center;
+        }
+        button{
+            font-size: 8vh;
+            padding: 2vh 4vw;
+            border-radius: 15px;
+        }
+
+        button:hover{
+            background-color: darkred;
+            color: white;
+        }
+        .contenedor{
+            min-width: 60vw;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        let manejador;
+
+        function muestra() {
+            let fecha = new Date();
+            // let reloj = document.getElementById('reloj');
+            // reloj.innerHTML = fecha;
+            let horas = fecha.getHours();
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+
+            let span_horas = document.getElementById('horas');
+            let span_minutos = document.getElementById('minutos');
+            let span_segundos = document.getElementById('segundos');
+
+            span_horas.innerHTML = horas.toString().padStart(2, '0');
+            span_minutos.innerHTML = minutos.toString().padStart(2, '0');
+            span_segundos.innerHTML = segundos.toString().padStart(2, '0');
+
+        }
+
+        function iniciar() {
+            muestra();
+            manejador = setInterval(muestra, 1000);
+        }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="contenedor">
+    <div id="reloj">
+        <p><span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
+        </p>
+    </div>
+    <button onclick="iniciar()">
+        Iniciar
+    </button>
+    </div>
+
+
+
+</body>
+
+</html>

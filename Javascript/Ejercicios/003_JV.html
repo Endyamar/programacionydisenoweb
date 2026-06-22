@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción al DOM - Javascript</title>
+<style>
+
+</style>
+
+</head>
+
+<body>
+    <div id="primero">
+        <p class="hola">Hola Caracola</p>
+</div>
+
+<button onclick="amarillo()">
+    Amarillo
+</button>
+
+<button onclick="cambia_texto()">
+    Cambiatexto
+</button>
+
+<button onclick="tamano()">
+    Tamaño
+</button>
+
+<button onclick="mas_grande()">
+    +
+</button>
+<button onclick="mas_peque()">
+    -
+</button>
+<script>
+    function amarillo(){
+        let primero = document.getElementById('primero');
+
+        if(primero.style.backgroundColor == 'yellow'){
+            primero.style.backgroundColor = '';
+        }
+
+        else{
+            primero.style.backgroundColor = 'yellow';
+        }
+    }
+
+    function cambia_texto(){
+        let primero = document.getElementById('primero');
+
+        if(primero.innerText == 'Hola Caracola'){
+            primero.innerText = 'Cambia el texto';
+        }
+
+        else{
+            primero.innerText = 'Hola Caracola';
+        }
+    }
+
+    function tamano(){
+        let primero = document.getElementById('primero');
+
+        if(primero.style.fontSize == '16px'){
+            primero.style.fontSize = '30px';
+        }
+
+        else{
+            primero.style.fontSize = '16px';
+        }
+    }
+
+    function mas_grande(){
+        let primero = document.getElementById('primero');
+        primero.style.fontSize ='10rem';
+    }
+
+    function mas_peque(){
+        let primero = document.getElementById('primero');
+        primero.style.fontSize ='1rem';
+    }
+    
+
+</script>
+
+</body>
+</html>
