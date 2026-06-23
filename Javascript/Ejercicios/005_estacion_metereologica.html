@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+           width: 100vh;
+           display: grid; 
+        }
+        .contenedor{
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: 3, 1fr;
+            grid-template-areas:
+            "01 01 01"
+            "02 03 04";
+        }
+
+        .reloj{
+            border: 1px solid blue;
+            grid-area: 01;
+        }
+
+        .fecha{
+            border: 1px solid blue;
+            grid-area: 02;
+        }
+
+        .semana{
+            border: 1px solid blue;
+            grid-area: 03;
+        }
+
+        .temperatura{
+            border: 1px solid blue;
+            grid-area: 04;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="contenedor">
+    <div class="reloj">
+        <p><span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span></p>
+    </div>
+    <div class="fecha">
+        <p><span id="dia">00</span>-<span id="mes">00</span></p>
+    </div>
+    <div class="semana">
+        <p><span id="diasemana">TUES</span>DAY</p>
+    </div>
+    <div class="temperatura">
+        <p><span id="temp">00</span>º</p>
+    </div>
+</div>
+</body>
+
+</html>

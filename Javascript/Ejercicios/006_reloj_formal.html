@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj con formato</title>
+
+    <style>
+    
+    @font-face {
+            font-family: 'sevegment';
+            src: url('../../ttf/fs-sevegment.otf.woff2') format('woff2');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: antiquewhite;
+            /* border: 1px solid red; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'sevegment', monospace;
+
+        }
+
+        .contenedor {
+            width: 900px;
+            border: 30px solid black;
+            background-color: #d8dece;
+            padding: 25px;
+            border-radius: 50px;
+        }
+
+        .arriba {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 80px 1fr 80px;
+
+        }
+
+        .mna {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .hora-min {
+            display: grid;
+            grid-template-columns: auto 0.55em auto;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 150px;
+            /* line-height: 1; */
+        }
+
+        #segundos {
+            font-size: 60px;
+        }
+
+        .linea {
+            height: 3px;
+            background-color: black;
+            margin: 20px 0;
+        }
+
+        .abajo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .celda {
+            text-align: center;
+            border-right: 3px solid black;
+        }
+
+        .celda:last-child {
+            border-right: none;
+        }
+
+        .etiqueta{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .valor{
+            font-size: 60px;
+        }
+
+        #diasem{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-weight: bold; */
+        }
+
+        #puntos{
+            font-family: 'sevegmente', sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="arriba">
+            <div class="mna" id="ampm">AM</div>
+            <div class="hora-min" id="reloj">
+                <span id="horas">00</span>
+                <span id="puntos">:</span>
+                <span id="minutos">00</span>
+            </div>
+            <div id="segundos">00</div>
+        </div>
+
+        <div class="linea">
+
+        </div>
+
+        <div class="abajo">
+            <div class="celda">
+                <div class="etiqueta">DÍA</div>
+                <div id="diames" class="valor">31</div>
+            </div>
+            <div class="celda">
+                <div class="etiqueta">MES</div>
+                <div id="mes" class="valor">12</div>
+            </div>
+            <div class="celda">
+                <div class="etiqueta">DIA SEM.</div>
+                <div id="diasem" class="valor">JUEVES</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let manejador;
+        let mostrar = true;
+
+        function muestra() {
+            let semana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            let fecha = new Date();
+            // let reloj = document.getElementById('reloj');
+            // reloj.innerHTML = fecha;
+            let horas = fecha.getHours();
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+            let diames = fecha.getDate();
+            let mes = fecha.getMonth() + 1;
+            let diasem = fecha.getDay();
+
+            if(horas>=12){
+                document.getElementById('ampm').textContent='PM';
+            }
+            else{
+                document.getElementById('ampm').textContent='AM';
+            }
+
+            let span_horas = document.getElementById('horas');
+            let span_minutos = document.getElementById('minutos');
+            let span_segundos = document.getElementById('segundos');
+            let span_diames = document.getElementById('diames');
+            let span_mes = document.getElementById('mes');
+            let span_diasem = document.getElementById('diasem');
+
+            span_horas.innerHTML = horas.toString().padStart(2, '0');
+            span_minutos.innerHTML = minutos.toString().padStart(2, '0');
+            span_segundos.innerHTML = segundos.toString().padStart(2, '0');
+            span_diames.innerHTML = diames.toString().padStart(2, '0');
+            span_mes.innerHTML = mes.toString().padStart(2, '0');
+            span_diasem.innerHTML = semana[diasem];
+
+
+            mostrar = !mostrar;
+            if(mostrar){
+                document.getElementById('puntos').style.visibility = "visible";
+            }
+            else{
+                document.getElementById('puntos').style.visibility = "hidden";
+            }
+
+        }
+            muestra();
+            manejador = setInterval(muestra, 1000);
+        
+    </script>
+</body>
+
+</html>
