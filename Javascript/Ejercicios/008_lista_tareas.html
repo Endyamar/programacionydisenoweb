@@ -1,87 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    li{
-        margin-bottom: 0.5rem;
-    }
-    #nueva_tarea{
-        margin-bottom: 1.5rem;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    .tachado{
-        text-decoration: line-through;
-    }
-</style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 20vh;
+            background-image: url(../../Imagenes/wallpapersden.com_the-owl-house_3840x2160.jpg);
+            background-size: cover;
+            color: white;
+        }
+
+        li {
+            display: grid;
+            grid-template-columns: 1rem 1fr 4rem;
+            margin-top: 0.5rem;
+            list-style: none;
+        }
+
+        .app {
+            min-height: 40vh;
+            min-width: 40vw;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 3vh 3vw;
+            background-color: darkred;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        #nueva_tarea {
+            /* margin-bottom: 1.5rem; */
+        }
+
+        .tachado {
+            text-decoration: line-through;
+        }
+
+        .editor {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .editor input {
+            flex-grow: 3;
+        }
+
+        .editor button {
+            flex-grow: 1;
+        }
+
+        span {
+            margin: 0 10px;
+        }
+
+        /* ul.colores-alternos li:nth-child(even){
+            background-color: #E4DFB5;
+        }
+
+        ul.colores-alternos li:nth-child(odd){
+            background-color: blue;
+        } */
+    </style>
 
 </head>
 
 
 <body>
 
-<div class="app">
-    <h1>Mi lista de tareas</h1>
+    <div class="app">
+        <h1>Mi lista de tareas</h1>
+
+        <div class="editor">
+
+            <input type="text" name="" id="nueva_tarea" placeholder="Nueva tarea">
+            <button onclick="crear_tarea()">Crear</button>
+        </div>
+        <div class="botonera">
+            <button onclick="guardar_lista()">Guardar</button>
+            <button onclick="cargar_lista()">Cargar</button>
+        </div>
+        <ul id="tareas" class="colores-alternos"></ul>
+    </div>
 
 
-    <ul id="tareas">
-        <input type="text" name="" id="nueva_tarea" placeholder="Nueva tarea">
-        <button onclick="crear_tarea()">Crear</button>
-    </ul>
+    <script>
+        let array_tareas = [];
 
-</div>    
-<script>
-    function crear_tarea(){
-        const input = document.getElementById("nueva_tarea");
-        const texto = input.value;
-
-        const li = document.createElement('li');
-        const check = document.createElement('input');
-        check.type = "checkbox";
-        check.onclick = function(){alternar(this)}
-        
-        const span = document.createElement('span');
-        span.innerHTML = texto;
-        span.onclick = function(){editar_tarea(this);}
-    
-
-        const boton = document.createElement('button');
-        boton.innerHTML = "Borrar";
-        boton.onclick = function(){borrar_tarea(this);};
-
-        li.appendChild(check);
-        li.appendChild(span);
-        li.appendChild(boton);
-
-        const lista = document.getElementById("tareas");
-        lista. appendChild(li);
-
-        input.value = "";
-    }
-
-    function borrar_tarea(boton){
-        const li = boton.parentNode;
-        li.parentNode.removeChild(li);
-    }
-
-    function alternar(casilla){
-        const li = casilla.parentNode;
-        if(casilla.checked){
-            li.className = "tachado";
-        }
-        else{
-            li.className = "";
-        }
-    }
-        function editar_tarea(span){
-            const texto_actual = span.innerHTML;
+        function crear_tarea() {
             const input = document.getElementById("nueva_tarea");
+            const texto = input.value;
+
+            const li = document.createElement('li');
+            const check = document.createElement('input');
+            check.type = "checkbox";
+            check.onclick = function () { alternar(this) }
+
+            const span = document.createElement('span');
+            span.innerHTML = texto;
+            span.onclick = function () { editar_tarea(this); }
+
+
+            const boton = document.createElement('button');
+            boton.innerHTML = "Borrar";
+            boton.onclick = function () { borrar_tarea(this); };
+
+            li.appendChild(check);
+            li.appendChild(span);
+            li.appendChild(boton);
+
+            const lista = document.getElementById("tareas");
+            lista.appendChild(li);
+
+            lista.prepend(li)
+
+            // Guardao la tarea en una array
+            array_tareas.push(texto)
+
+            input.value = "";
+            input.focus();
+        }
+
+        function borrar_tarea(boton) {
+            const li = boton.parentNode;
+            li.parentNode.removeChild(li);
+        }
+
+        function alternar(casilla) {
+            const li = casilla.parentNode;
+            if (casilla.checked) {
+                li.className = "tachado";
+            }
+            else {
+                li.className = "";
+            }
+        }
+        function editar_tarea(span) {
+            const texto_actual = span.innerHTML;
+            const input = document.createElement("input");
             input.type = "text";
             input.value = texto_actual;
-
+    
+        input.onblur = function() {
+            if (input.value === '') {
+                span.innerHTML = textp_actual;
+            }
+            else {
+                span.innerHTML = input.value;
+            }
+            input.parentNode.replaceChild(input, span);
+            input.focus();
         }
-</script>
+    }
+
+        function guardar_lista(){
+            const tareas = document.getElementById("tareas");
+            let elementos = tareas.getElementsByTagName('span');
+            let lista = [];
+
+            for(let i = 0; i < elementos.length; i++){
+                lista.push(elementos[i].innerHTML)
+            }
+
+            localStorage.setItem('mi_tareas', JSON.stringify(lista))
+        }
+
+        function cargar_lista(){
+            let datos = localStorage.getItem('mis_tareas');
+            let lista = JSON.parse(datos);
+        }
+    </script>
 </body>
+
 </html>
