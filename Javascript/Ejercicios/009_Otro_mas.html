@@ -1,11 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Menu hamburguesa</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(90, 90, 139);
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgb(42, 42, 105);
+            color: white;
+            position: relative;
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Menu */
+
+        #menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        #menu a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #menu a:hover {
+            color: #60A5FA;
+        }
+
+        /* Botón hamburguesa */
+
+        #hamburguesa {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+
+        }
+
+        /* Menú en el móvil */
+
+        @media (max-width:700px) {
+            #hamburguesa {
+                display: block;
+            }
+
+            #menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+
+                width: 100%;
+                background-color: #374151;
+                flex-direction: column;
+
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            #menu li {
+                margin: 0;
+                border-top: 1px solid black;
+            }
+
+            #menu a {
+                display: block;
+                padding: 15px;
+            }
+        }
+
+        .contenedor {
+            max-width: 61rem;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .articulo {
+            border: 1px solid greenyellow;
+            
+        }
+    </style>
     
+</head>
+
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Mi logo</div>
+            <button id="hamburguesa">&#9776;</button>
+            <ul id="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Posts</a></li>
+                <li><a href="">Descargables</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="contenedor">
+        <div class="articulo">
+            <img src="../../Imagenes/trauma-unit-2.jpg" alt="">
+            <h2>Trauma unit</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, magnam autem enim accusamus delectus
+                repellendus. Quis odio debitis itaque a possimus dignissimos. Omnis ut reprehenderit quas cum quisquam,
+                doloribus soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, architecto
+                distinctio atque dignissimos quaerat officiis, harum obcaecati magnam ex eum odio id fuga nesciunt
+                numquam minima, nihil odit officia facere? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatibus deserunt omnis ducimus quibusdam laborum maiores id eos hic saepe, rerum fugiat, cupiditate
+                commodi nostrum deleniti quia repellendus consequatur quasi suscipit.</p>
+        </div>
+    </div>
+<script>
+
+        const boton = document.getElementById("hamburguesa");
+        const menu = document.getElementById("menu");
+
+        boton.addEventListener("click",cambia_menu);
+        window.addEventListener("resize",restaura_menu);
+
+        function cambia_menu(){
+            if(menu.style.display == "flex"){
+                menu.style.display = "none";
+            }
+            else{
+                menu.style.display = "flex";
+                menu.style.flexDirection = "column";
+            }
+        }
+
+        function restaura_menu(){
+            if(window.innerWidth > 700){
+                menu.style.display = "flex";
+                menu.style.flexDirection = "row";
+            }
+            else{
+                menu.style.display = "none";
+            }
+        }
+
+        restaura_menu();
+
+    </script>
 </body>
+
+
+
 </html>

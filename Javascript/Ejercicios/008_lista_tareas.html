@@ -183,6 +183,9 @@
         function cargar_lista(){
             let datos = localStorage.getItem('mis_tareas');
             let lista = JSON.parse(datos);
+            for (let i = 0; i < lista_guardada.length; i++){
+                crear_tarea(lista_guardada[i])
+            }
         }
     </script>
 </body>
